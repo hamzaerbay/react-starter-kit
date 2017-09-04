@@ -1,0 +1,10 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #232C3B;
+  font-size: 40px;
+  background: #F5F7FA; }
+  body h1 {
+    color: #DB4747; }
+  body p {
+    color: #707070;
+    font-size: 15px; }
