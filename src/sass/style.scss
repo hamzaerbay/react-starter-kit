@@ -1,0 +1,14 @@
+@import 'variables';
+body{
+  font-family: 'Roboto', sans-serif;
+  color: $color-midnight;
+  font-size:40px;
+  background: $color-rain-lighter;
+  h1{
+    color:$color-coral;
+  }
+  p{
+    color: $color-rain-darker;
+    font-size: 15px;
+  }
+}

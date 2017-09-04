@@ -1,4 +1,4 @@
-const css = require('../less/style.less');
+const css = require('../sass/style.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
