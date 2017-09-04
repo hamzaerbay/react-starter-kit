@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack -d --watch",
-    "dev-server": "webpack -d && webpack-dev-server",
+    "dev-server": "webpack-dev-server",
     "prod": "npm run clean && webpack -p",
     "clean": "rimraf ./dist/*"
   },
@@ -30,7 +30,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "keywords": [],
-  "description": "Simple setup of ReactJs",
+  "description": "Simple setup for ReactJs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hamzaerbay/react-starter-kit.git"

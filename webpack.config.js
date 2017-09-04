@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/js/app.js',
   module: {
       rules: [
-        {//sass config
+        {
           test: /\.scss$/,
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
@@ -12,27 +12,27 @@ module.exports = {
           }
         )
       },
-      {//js config
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       }
     ]
   },
-  devServer: {//devserver
+  devServer: {
     contentBase: path.join(__dirname),
     compress: true,
-    port: 9000,
+    // port: 9000,
     stats:'errors-only',
     open: true,
   },
-  plugins: [//sass config
+  plugins: [
     new ExtractTextPlugin({
       allChunks: true,
       filename: './dist/styles.css'
     })
   ],
-  output: {//project base
+  output: {
 
     path: path.resolve(__dirname),
     filename: './dist/app.bundle.js'
