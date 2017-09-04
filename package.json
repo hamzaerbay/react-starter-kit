@@ -1,14 +1,14 @@
 {
-  "name": "webpack-demo",
+  "name": "react-starter-kit",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "dev": "webpack -d --watch",
-    "dev-server": "webpack-dev-server",
+    "dev-server": "webpack -d && webpack-dev-server",
     "prod": "npm run clean && webpack -p",
     "clean": "rimraf ./dist/*"
   },
-  "author": "",
+  "author": "Hamza Erbay",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
@@ -30,5 +30,13 @@
     "webpack-dev-server": "^2.7.1"
   },
   "keywords": [],
-  "description": ""
+  "description": "Simple setup of ReactJs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamzaerbay/react-starter-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hamzaerbay/react-starter-kit/issues"
+  },
+  "homepage": "https://github.com/hamzaerbay/react-starter-kit#readme"
 }
