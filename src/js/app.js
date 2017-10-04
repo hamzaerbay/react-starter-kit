@@ -1,8 +1,9 @@
-const css = require('../sass/style.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
+import HelloWorld from './hello-world';
+import '../sass/style.scss';
 
 ReactDOM.render(
-  <h1>Hello, React!</h1>,
-  document.getElementById('root')
+  <HelloWorld />,
+  document.getElementById('root'),
 );
