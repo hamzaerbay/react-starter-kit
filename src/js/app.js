@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './hello-world';
 import '../sass/style.scss';
 
-ReactDOM.render(
-  <HelloWorld />,
-  document.getElementById('root'),
-);
+import TodoList from './TodoList';
+import store from './TodoStore';
+
+ReactDOM.render(<TodoList store={store} />, document.getElementById('root'));
