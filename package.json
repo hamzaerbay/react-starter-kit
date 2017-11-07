@@ -11,8 +11,10 @@
   "author": "Hamza Erbay",
   "license": "ISC",
   "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "mobx": "2.6.0",
+    "mobx-react": "3.5.9"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
