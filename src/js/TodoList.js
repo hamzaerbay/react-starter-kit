@@ -50,7 +50,7 @@ export default class TodoList extends Component {
 						this.addForm = input;
 					}}
 					onSubmit={e => {
-						this.createNew(e);
+						this.createNew(e); 
 					}}
 				>
 					<input className="add-item__input" ref={input => (this.newItem = input)} />
