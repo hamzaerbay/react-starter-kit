@@ -6,7 +6,8 @@
     "dev": "webpack -d --watch",
     "dev-server": "webpack-dev-server",
     "prod": "npm run clean && webpack -p",
-    "clean": "rimraf ./dist/*"
+    "clean": "rimraf ./dist/*",
+    "lint:eslint": "eslint ./src/*"
   },
   "author": "Hamza Erbay",
   "license": "ISC",
