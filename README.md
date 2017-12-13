@@ -9,13 +9,21 @@ Base lint rules added for code quality. StyleLint rules extended [styleLint](htt
 Containing my [vsCode](https://code.visualstudio.com/) editor settings.
 
 ## Getting started
-
->**Run** `npm install`/ `yarn install` for getting dependencies and run.
->
->`npm run dev-server` / `yarn run dev-server` for using webpack dev server.
->
->`npm run prod` / `yarn run prod` for deploying everything for production.
-
+### Install dependencies
+```
+npm install / yarn install
+```
+### Build with webpack dev server
+Deploying for local usage if you don't want use webpack dev server run `npm/yarn run dev`.
+```
+npm run dev-server / yarn run dev-server
+```
+visit the http://localhost:8080/
+### Build for production
+Deploying everything for production.
+```
+npm run prod / yarn run prod 
+```
 ## How can I support?
 - Star our GitHub repo ⭐️
 - Create pull requests, submit bugs, suggest new features or documentation updates 🔧
