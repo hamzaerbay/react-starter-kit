@@ -4,18 +4,24 @@ const path = require('path');
 module.exports = {
   entry: './src/js/app.js',
   module: {
-    rules: [{
-      test: /\.scss$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: ['css-loader', 'sass-loader'],
-      }),
-    },
-    {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader',
-    },
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', {
+            loader: 'sass-loader',
+            options: {
+              includePaths: ['node_modules', 'src', '.'],
+            },
+          }],
+        }),
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
     ],
   },
   devServer: {
