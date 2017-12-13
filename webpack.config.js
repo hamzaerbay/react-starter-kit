@@ -6,6 +6,9 @@ module.exports = {
   module: {
     rules: [
       {
+        includePaths: [
+          'node_modules', 'bower_components', 'src', '.',
+        ],
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
