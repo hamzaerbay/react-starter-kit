@@ -15,6 +15,6 @@ Base lint rules added for code quality. StyleLint rules extended [styleLint](htt
 
 >`npm run prod` / `yarn run prod` for deploying everything for production.
 
-##How can I support developers?
+## How can I support developers?
 - Star our GitHub repo ⭐️
 - Create pull requests, submit bugs, suggest new features or documentation updates 🔧
