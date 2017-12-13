@@ -9,6 +9,13 @@ Base lint rules added for code quality. StyleLint rules extended [styleLint](htt
 Containing my [vsCode](https://code.visualstudio.com/) editor settings.
 
 ## Getting started
+
+### Clone
+```
+$ git clone https://github.com/hamzaerbay/react-starter-kit.git <my-awesome-project>
+$ cd <my-awesome-project>
+```
+
 ### Install dependencies
 ```
 npm install / yarn install
