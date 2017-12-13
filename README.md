@@ -6,6 +6,7 @@ Built from scratch and added the base component and lint rules for the beautiful
 
 Base lint rules added for code quality. StyleLint rules extended [styleLint](https://stylelint.io/) and esLint rules extended [Airbnb](https://github.com/airbnb/javascript).
 
+Containing my [vsCode](https://code.visualstudio.com/) editor settings.
 
 ## Getting started
 
