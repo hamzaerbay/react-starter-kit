@@ -2,7 +2,7 @@
 Easy to use configurable starter kit for small sized projects.
 
 ## What's it all about?
-Built from scratch and added the base component and lint rules for the beautiful codebase. Using a lightweight CSS framework that [Bulma.io](https://github.com/jgthms/bulma){:target="_blank"}. 
+Built from scratch and added the base component and lint rules for the beautiful codebase. Using a lightweight CSS framework that [Bulma.io](https://github.com/jgthms/bulma).
 
 Base lint rules added for code quality. StyleLint rules extended [styleLint](https://stylelint.io/) and esLint rules extended [Airbnb](https://github.com/airbnb/javascript).
 
