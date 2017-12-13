@@ -6,13 +6,15 @@ module.exports = {
   module: {
     rules: [
       {
-        includePaths: [
-          'node_modules', 'bower_components', 'src', '.',
-        ],
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
+          use: ['css-loader', {
+            loader: 'sass-loader',
+            options: {
+              includePaths: ['node_modules', 'src', '.'],
+            },
+          }],
         }),
       },
       {
