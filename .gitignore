@@ -2,3 +2,4 @@
 node_modules
 dist/app.bundle.js
 dist/styles.css
+coverage

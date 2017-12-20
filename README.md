@@ -31,6 +31,13 @@ Deploying everything for production.
 ```
 npm run prod / yarn run prod 
 ```
+### Testing
+Installed JEST testing framework
+You can find further information on this [doc](https://facebook.github.io/jest/)
+For [cheatsheet](https://github.com/sapegin/jest-cheat-sheet)
+```
+npm run test / yarn run test
+```
 ## How can I support?
 - Star our GitHub repo ⭐️
 - Create pull requests, submit bugs, suggest new features or documentation updates 🔧
