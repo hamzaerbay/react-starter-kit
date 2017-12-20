@@ -33,8 +33,7 @@ npm run prod / yarn run prod
 ```
 ### Testing
 Installed JEST testing framework
-You can find further information on this [doc](https://facebook.github.io/jest/)
-For [cheatsheet](https://github.com/sapegin/jest-cheat-sheet)
+You can find further information on this [doc](https://facebook.github.io/jest/) also there is a [cheatsheet](https://github.com/sapegin/jest-cheat-sheet)
 ```
 npm run test / yarn run test
 ```
