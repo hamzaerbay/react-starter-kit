@@ -31,6 +31,7 @@ module.exports = {
     // port: 9000,
     stats: 'errors-only',
     open: true,
+    historyApiFallback: true,
   },
   plugins: [
     new ExtractTextPlugin({
