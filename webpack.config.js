@@ -1,6 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: './src/js/app.js',
@@ -39,6 +40,7 @@ module.exports = {
       filename: './dist/styles.css',
     }),
     new StyleLintPlugin('.stylelint.json'),
+    new BundleAnalyzerPlugin(),
   ],
   output: {
     path: path.resolve(__dirname),
