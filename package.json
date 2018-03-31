@@ -6,6 +6,7 @@
     "dev": "webpack -d --watch",
     "dev-server": "webpack-dev-server",
     "prod": "npm run clean && webpack -p",
+    "debug": "npm run clean && NODE_ENV=debug webpack -p",
     "clean": "rimraf ./dist/*",
     "lint:eslint": "eslint ./src/*",
     "lint:stylelint": "stylelint ./src/*",
@@ -50,6 +51,7 @@
     "stylelint": "^8.3.1",
     "stylelint-webpack-plugin": "^0.9.0",
     "webpack": "^3.5.5",
+    "webpack-bundle-analyzer": "^2.11.1",
     "webpack-dev-server": "^2.7.1"
   },
   "jest": {
