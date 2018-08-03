@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const path = require('path');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
@@ -57,5 +58,6 @@ module.exports = {
   devServer: {
     port: 9000,
     compress: true,
+    contentBase: path.join(__dirname, 'public'),
   },
 };
