@@ -58,6 +58,6 @@ module.exports = {
   devServer: {
     port: 9000,
     compress: true,
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, 'dist'),
   },
 };
