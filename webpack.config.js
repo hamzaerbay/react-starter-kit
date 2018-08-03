@@ -1,53 +1,61 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const plugins = [];
-if (process.env.NODE_ENV === 'debug') {
-  plugins.push(new BundleAnalyzerPlugin());
-}
+const htmlPlugin = new HtmlWebPackPlugin({
+  template: './src/index.html',
+  filename: './index.html',
+});
+const miniCssPlugin = new MiniCssExtractPlugin({
+  filename: '[name].css',
+  chunkFilename: '[id].css',
+});
+const styleLintPlugin = new StyleLintPlugin({ configFile: './.stylelintrc', emitErrors: false });
 
 module.exports = {
-  entry: './src/js/app.js',
+  output: {
+    filename: 'bundle.min.js',
+  },
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', {
-            loader: 'sass-loader',
-            options: {
-              includePaths: ['node_modules', 'src', '.'],
-            },
-          }],
-        }),
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          emitErrors: true,
+          emitWarning: true,
+        },
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        loader: 'svg-react-loader',
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader', {
+            loader: 'sass-loader',
+            options: {
+              includePaths: ['node_modules'],
+            },
+          }],
       },
     ],
   },
+  plugins: [htmlPlugin, styleLintPlugin, miniCssPlugin],
   devServer: {
-    contentBase: path.join(__dirname),
+    port: 9000,
     compress: true,
-    // port: 9000,
-    stats: 'errors-only',
-    open: true,
-    historyApiFallback: true,
-  },
-  plugins: [
-    new ExtractTextPlugin({
-      allChunks: true,
-      filename: './dist/styles.css',
-    }),
-    new StyleLintPlugin('.stylelint.json'),
-  ].concat(plugins),
-  output: {
-    path: path.resolve(__dirname),
-    filename: './dist/app.bundle.js',
   },
 };
