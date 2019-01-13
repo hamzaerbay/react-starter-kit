@@ -1,3 +1,4 @@
 {
-  "presets": ["env", "react", "mobx"]
+  "presets": ["env", "react", "mobx"],
+  "plugins": ["syntax-dynamic-import"]
 }
