@@ -1,11 +1,14 @@
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const path = require('path');
 
+const cleanDist = new CleanWebpackPlugin(['dist']);
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
   filename: './index.html',
+  title: 'Caching',
 });
 const miniCssPlugin = new MiniCssExtractPlugin({
   filename: '[name].css',
@@ -15,7 +18,7 @@ const styleLintPlugin = new StyleLintPlugin({ configFile: './.stylelintrc', emit
 
 module.exports = {
   output: {
-    filename: 'bundle.min.js',
+    filename: '[name].[contenthash].js',
   },
   module: {
     rules: [
@@ -54,7 +57,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [htmlPlugin, styleLintPlugin, miniCssPlugin],
+  plugins: [cleanDist, htmlPlugin, styleLintPlugin, miniCssPlugin],
   devServer: {
     port: 9000,
     compress: true,
