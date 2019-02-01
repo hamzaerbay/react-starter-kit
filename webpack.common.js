@@ -15,10 +15,8 @@ const miniCssPlugin = new MiniCssExtractPlugin({
 });
 const styleLintPlugin = new StyleLintPlugin({ configFile: './.stylelintrc', emitErrors: false });
 const production = process.env.NODE_ENV === 'production';
+
 module.exports = {
-  output: {
-    filename: '[name].bundle.[contenthash].js',
-  },
   module: {
     rules: [
       {
@@ -53,6 +51,10 @@ module.exports = {
               includePaths: ['node_modules'],
             },
           }],
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader',
       },
     ],
   },
