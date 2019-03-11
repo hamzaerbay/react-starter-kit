@@ -2,7 +2,8 @@
   "parser": "babel-eslint",
   "plugins": [
     "react",
-    "jest"
+    "jest",
+    "react-hooks"
   ],
   "extends": ["airbnb"],
   "env": {
@@ -16,6 +17,8 @@
     "quotes": ["error", "single"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "max-len": [1, 120, 2, {"ignoreComments": true}],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/prefer-es6-class": ["error", "always"],
     "react/no-unused-prop-types": [1],
     "react/prop-types": [2],
