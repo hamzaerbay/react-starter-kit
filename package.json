@@ -1,0 +1,39 @@
+{
+  "name": "react-starter-kit",
+  "version": "3.0.0",
+  "description": "Simple setup for ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://hamzaerbay@github.com/hamzaerbay/react-starter-kit.git"
+  },
+  "keywords": [
+    "react",
+    "vite"
+  ],
+  "author": "Hamza Erbay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hamzaerbay/react-starter-kit/issues"
+  },
+  "homepage": "https://github.com/hamzaerbay/react-starter-kit#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.2",
+    "vite": "^4.4.9"
+  }
+}
