@@ -20,20 +20,28 @@ $ cd <my-awesome-project>
 ```
 npm install / yarn install
 ```
-### Build with webpack dev server
-Deploying for local usage if you don't want use webpack dev server run `npm/yarn run dev`.
+### Build with [vitejs](https://github.com/vitejs/vite)
+Deploying for local usage
 ```
-npm run dev-server / yarn run dev-server
+npm run dev / yarn run dev
 ```
-visit the http://localhost:8080/
+visit the http://localhost:5174/
+### Helpful Commands
+```
+# prettier
+npm run format / yarn format
+# eslint
+npm run lint / yarn lint
+```
+
 ### Build for production
 Deploying everything for production.
 ```
-npm run prod / yarn run prod 
+npm run build / yarn run build 
 ```
-### Testing
-Installed JEST testing framework
-You can find further information on this [doc](https://facebook.github.io/jest/) also there is a [cheatsheet](https://github.com/sapegin/jest-cheat-sheet)
+### [WIP] Testing 
+Installed RTL framework
+You can find further information on this [doc](https://testing-library.com/) also there is a [cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
 ```
 npm run test / yarn run test
 ```

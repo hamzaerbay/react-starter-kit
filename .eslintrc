@@ -1,34 +1,38 @@
 {
-  "parser": "babel-eslint",
-  "plugins": [
-    "react",
-    "jest",
-    "react-hooks"
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
   ],
-  "extends": ["airbnb"],
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true,
-    "jest/globals": true
-  },
   "rules": {
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "semi": ["error", "always"],
-    "quotes": ["error", "single"],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "max-len": [1, 120, 2, {"ignoreComments": true}],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/prefer-es6-class": ["error", "always"],
-    "react/no-unused-prop-types": [1],
-    "react/prop-types": [2],
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error"
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "eol-last": 2
+  },
+  "plugins": ["react", "import", "jsx-a11y"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", "tsx"]
+      }
+    }
   }
 }
