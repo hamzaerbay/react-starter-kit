@@ -1,8 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-
-const App = () => {
-  return <div>HOLA!!!!</div>;
+import { Header } from './components/Header'
+export const App = () => {
+  return <div>
+    <Header title='HOLA!!' />
+    <p>🙌🙌🙌🙌</p>
+  </div>;
 };
 
 const root = createRoot(document.getElementById('root')!);
