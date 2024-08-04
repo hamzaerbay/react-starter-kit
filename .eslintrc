@@ -42,6 +42,13 @@
       },
       "typescript":{
         "alwaysTryTypes": true
+      },
+      "alias": {
+        "map": [
+          ["@", "./src"],
+          ["@components", "./src/components"]
+        ],
+        "extensions": [".ts", ".tsx", ".js", ".jsx"]
       }
     }
   }
